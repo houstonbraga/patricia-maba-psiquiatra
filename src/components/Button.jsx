@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 
 const styles =
-  "w-full bg-custom-green py-3 flex justify-center items-center gap-3 rounded-lg text-white font-poppins font-medium hover:bg-opacity-90 transition-all";
+  "w-full bg-custom-green py-3 z-[50] flex justify-center items-center gap-3 rounded-lg text-white font-poppins font-medium hover:bg-opacity-90 transition-all";
 
 export const ButtonLink = ({ url, children }) => {
   return (

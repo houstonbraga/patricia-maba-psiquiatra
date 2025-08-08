@@ -28,7 +28,7 @@ function App() {
 
   return (
     <div
-      className="flex flex-col overflow-x-hidden items-center justify-between max-w-md w-[448px] bg-cover bg-center bg-no-repeat min-h-screen bg-opacity-10 pt-16"
+      className="flex flex-col overflow-x-hidden items-center justify-between max-w-md bg-cover bg-center bg-no-repeat min-h-screen bg-opacity-10 pt-16"
       style={{ backgroundImage: `url(${bgImage})` }}
     >
       <Header />

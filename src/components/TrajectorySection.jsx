@@ -16,7 +16,7 @@ const TrajectorySection = ({ isVisible, onClose }) => {
   if (!isVisible) return null;
 
   return (
-    <div className="w-full flex flex-col items-center mt-8 px-8">
+    <div className="w-full flex flex-col items-center mt-8 px-4">
       {/* Botão fechar */}
       <div className="w-full flex justify-start mb-6">
         <button
