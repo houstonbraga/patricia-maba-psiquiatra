@@ -6,17 +6,14 @@ import LoadingScreen from "./components/LoadingScreen";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import TestimonialsSection from "./components/TestimonialsSection";
-import TrajectorySection from "./components/TrajectorySection";
+
 import PatriciaPhoto from "./components/PatriciaPhoto";
 import useTestimonials from "./hooks/useTestimonials";
-import useTrajectory from "./hooks/useTrajectory";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   const { isTestimonialsVisible, showTestimonials, hideTestimonials } =
     useTestimonials();
-  const { isTrajectoryVisible, showTrajectory, hideTrajectory } =
-    useTrajectory();
 
   const handleLoadingComplete = () => {
     setIsLoading(false);
@@ -34,13 +31,10 @@ function App() {
       <Header />
 
       <div className="flex-1 w-full flex flex-col items-center">
-        {!isTestimonialsVisible && !isTrajectoryVisible ? (
+        {!isTestimonialsVisible ? (
           <>
             <InfoHero />
-            <GroupButtons
-              onShowTestimonials={showTestimonials}
-              onShowTrajectory={showTrajectory}
-            />
+            <GroupButtons onShowTestimonials={showTestimonials} />
             <PatriciaPhoto />
           </>
         ) : isTestimonialsVisible ? (
@@ -48,12 +42,7 @@ function App() {
             isVisible={isTestimonialsVisible}
             onClose={hideTestimonials}
           />
-        ) : (
-          <TrajectorySection
-            isVisible={isTrajectoryVisible}
-            onClose={hideTrajectory}
-          />
-        )}
+        ) : null}
       </div>
 
       <Footer />
